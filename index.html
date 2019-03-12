@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Patrick+Hand|Sniglet"
+      rel="stylesheet"
+    />
+
+    <title>Giphy API</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  </head>
+  <body>
+    <header><h2>Giphy API</h2></header>
+    <div class="container">
+      <div id="btnsdiv"></div>
+      <div id="giphyapi">
+        <div id="populate">Animals will be displayed here</div>
+        <div id="searchColumn">
+          <form id="searchTab">
+            <label id="label1">Search for an animal:</label><br />
+            <input type="text" id="searchQuery" placeholder="" /><br />
+            <input
+              id="searchButton"
+              class="btnClass"
+              type="submit"
+              value="Find Animal!"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./javascript/giphyapp.js"></script>
+  </body>
+</html>
