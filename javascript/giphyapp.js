@@ -70,7 +70,9 @@ $(document).ready(function() {
         newDiv = $("<div class = 'displayAnimal'>");
         newImg = $("<img>");
         gifImage = response.data[i].images.fixed_width.url;
-        gifImageStill = response.data[i].images.fixed_width_still.url;
+        //console.log(gifImage);
+        //gifImageStill = response.data[i].images.fixed_width_still.url;
+        //console.log(gifImageStill);
         newImg.attr("src", gifImage);
         var title = $('<span class = "title">');
         title.text(response.data[i].title);
@@ -88,11 +90,13 @@ $(document).ready(function() {
     }); //--------------------------- end of Ajax
   }); //---------------------------------end of document.on(Click)
   $(document).on("click", "img", function() {
-    var src = $("#displayAnimal img").attr("src");
-    if (src == gifImage) {
-      $("#displayAnimal img").attr("src", gifImageStill);
+    var src = $(this).attr("src");
+    if (src.includes("_s.gif")) {
+      src = src.replace(/_s.gif/g, ".gif");
+      $(this).attr("src", src);
     } else {
-      $("#displayAmimal img").attr("src", gifImage);
+      src = src.replace(/.gif/g, "_s.gif");
+      $(this).attr("src", src);
     }
   });
 }); //--------------------------end of document.ready function
