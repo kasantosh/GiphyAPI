@@ -12,8 +12,9 @@ header {
 
 .container {
   width: 100%;
-  font-family: "Patrick Hand", cursive;
+  font-family: "Dosis", sans-serif;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 #btnsdiv {
@@ -27,11 +28,22 @@ header {
 #populate {
   width: 70%;
   background-color: rgb(207, 203, 203);
-  border-right: 1px gray solid;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 #searchColumn {
   width: 30%;
   padding: 100px 0px 0px 40px;
+}
+
+#searchTab {
+  position: fixed;
+}
+
+.title {
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .btnClass {
@@ -45,5 +57,22 @@ header {
   border-radius: 5px;
 }
 
+.displayAnimal {
+  border-radius: 7px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  font-size: 16px;
+}
+
 .btnClass:hover {
-    background-color: blue;
+  background-color: blue;
+}
+.btnClass:active {
+  background-color: rgb(5, 152, 172);
+}
+
+#errorDisplay {
+  font-size: 14px;
+  color: red;
+}
