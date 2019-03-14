@@ -56,7 +56,7 @@ $(document).ready(function() {
     var animalQuery = $(this).text();
     console.log(animalQuery);
     var queryURL =
-      "http://api.giphy.com/v1/gifs/search?q=" +
+      "https://api.giphy.com/v1/gifs/search?q=" +
       animalQuery +
       "&api_key=LUVAX7z5WrsSlE8rbSgpuLSkE3KeteFM&limit=10&rating=g";
     console.log(queryURL);
